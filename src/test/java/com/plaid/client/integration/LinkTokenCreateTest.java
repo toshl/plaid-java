@@ -65,6 +65,7 @@ public class LinkTokenCreateTest extends AbstractItemIntegrationTest {
     )
       .withWebhook("https://example.com/webhook")
       .withLinkCustomizationName("default")
+      .withInstitutionId(TARTAN_BANK_INSTITUTION_ID)
       .withAccountFilters(accountFilters);
 
     Response<LinkTokenCreateResponse> response =

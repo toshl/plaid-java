@@ -23,6 +23,7 @@ public class LinkTokenCreateRequest extends BaseClientRequest {
   private Map<String, SubtypeFilters> accountFilters;
   private LinkTokenCreateRequest.CrossAppItemAdd crossAppItemAdd;
   private PaymentInitiation paymentInitiation;
+  private String institutionId;
 
   public LinkTokenCreateRequest(
     User user,
@@ -188,6 +189,11 @@ public class LinkTokenCreateRequest extends BaseClientRequest {
 
   public LinkTokenCreateRequest withPaymentInitiation(PaymentInitiation paymentInitiation) {
     this.paymentInitiation = paymentInitiation;
+    return this;
+  }
+
+  public LinkTokenCreateRequest withInstitutionId(String institutionId) {
+    this.institutionId = institutionId;
     return this;
   }
 }
